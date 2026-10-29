@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility Audit – www.w3.org</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--muted:#555;--card:#f5f6f8;--crit:#b00020;--ser:#c25400;--mod:#8a6d00;--min:#3a5a8c}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e8e8e8;--muted:#aaa;--card:#1d2126}}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif;max-width:960px;margin:0 auto;padding:24px 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.kpi{background:var(--card);padding:12px;border-radius:8px}.kpi b{font-size:28px;display:block}
+.rule{background:var(--card);border-left:4px solid var(--min);padding:8px 16px;margin:12px 0;border-radius:6px}
+.rule.critical{border-color:var(--crit)}.rule.serious{border-color:var(--ser)}.rule.moderate{border-color:var(--mod)}
+.badge{text-transform:uppercase;font-size:12px;padding:2px 6px;border-radius:4px;background:var(--fg);color:var(--bg)}
+pre{white-space:pre-wrap;word-break:break-all;font-size:13px;color:var(--muted)}
+.note{color:var(--muted);font-size:14px}
+</style></head><body>
+<h1>Website Accessibility Audit</h1>
+<p><b>www.w3.org</b> · 2026-10-29 · Standard: WCAG 2.1 Level AA · Pages scanned: 4</p>
+<div class="kpis">
+  <div class="kpi"><b>133</b>issues found</div>
+  <div class="kpi"><b>108</b>critical</div><div class="kpi"><b>25</b>serious</div><div class="kpi"><b>0</b>moderate</div><div class="kpi"><b>0</b>minor</div>
+</div>
+<h2>Issues by rule</h2>
+
+    <section class="rule critical">
+      <h3><span class="badge">critical</span> Images must have alternative text</h3>
+      <p>105 instance(s) on 3 page(s) · WCAG: wcag2a, wcag111 ·
+        <a href="https://dequeuniversity.com/rules/axe/4.10/image-alt?application=axeAPI">rule reference</a></p>
+      <pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;img src=&quot;./img/border_left_top.gif&quot; width=&quot;10px&quot; height=&quot;10px&quot;&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;img src=&quot;./img/border_top.gif&quot; height=&quot;10px&quot;&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;img src=&quot;./img/border_right_top.gif&quot; width=&quot;10px&quot; height=&quot;10px&quot;&gt;</pre>
+    </section>
+    <section class="rule critical">
+      <h3><span class="badge">critical</span> Select element must have an accessible name</h3>
+      <p>3 instance(s) on 3 page(s) · WCAG: wcag2a, wcag412 ·
+        <a href="https://dequeuniversity.com/rules/axe/4.10/select-name?application=axeAPI">rule reference</a></p>
+      <pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;select onchange=&quot;location.href = this.value;&quot;&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/annotated/home.html</b>
+&lt;select onchange=&quot;location.href = this.value;&quot;&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/news.html</b>
+&lt;select onchange=&quot;location.href = this.value;&quot;&gt;</pre>
+    </section>
+    <section class="rule serious">
+      <h3><span class="badge">serious</span> Links must have discernible text</h3>
+      <p>18 instance(s) on 3 page(s) · WCAG: wcag2a, wcag244, wcag412 ·
+        <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=axeAPI">rule reference</a></p>
+      <pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;a href=&quot;javascript:location.href='home.html';&quot; onfocus=&quot;blur();&quot;&gt;&lt;img name=&quot;nav_home&quot; src=&quot;./img/nav_home.gif&quot; width=&quot;88&quot; height=&quot;27&quot; hspace=&quot;15&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;a href=&quot;javascript:location.href='news.html';&quot; onfocus=&quot;blur();&quot;&gt;&lt;img src=&quot;./img/nav_news.gif&quot; name=&quot;nav_news&quot; width=&quot;90&quot; height=&quot;21&quot; hspace=&quot;12&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;a href=&quot;javascript:location.href='tickets.html';&quot; onfocus=&quot;blur();&quot;&gt;&lt;img name=&quot;nav_facts&quot; src=&quot;./img/nav_facts.gif&quot; width=&quot;105&quot; height=&quot;23&quot; hspace=&quot;9&quot; border=&quot;0px&quot;&gt;&lt;/a&gt;</pre>
+    </section>
+    <section class="rule serious">
+      <h3><span class="badge">serious</span> Elements must meet minimum color contrast ratio thresholds</h3>
+      <p>4 instance(s) on 2 page(s) · WCAG: wcag2aa, wcag143 ·
+        <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI">rule reference</a></p>
+      <pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;b&gt;Free Penguins&lt;/b&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;b&gt;More City Parks&lt;/b&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/annotated/home.html</b>
+&lt;b&gt;Free Penguins&lt;/b&gt;</pre>
+    </section>
+    <section class="rule serious">
+      <h3><span class="badge">serious</span> &lt;html&gt; element must have a lang attribute</h3>
+      <p>3 instance(s) on 3 page(s) · WCAG: wcag2a, wcag311 ·
+        <a href="https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=axeAPI">rule reference</a></p>
+      <pre><b>https://www.w3.org/WAI/demos/bad/before/home.html</b>
+&lt;html&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/annotated/home.html</b>
+&lt;html&gt;</pre><pre><b>https://www.w3.org/WAI/demos/bad/before/news.html</b>
+&lt;html&gt;</pre>
+    </section>
+<h2>Pages scanned</h2>
+<ul><li>https://www.w3.org/WAI/demos/bad/before/home.html – 5 rule violation(s)</li><li>https://www.w3.org/WAI/demos/bad/before/reports/home.html – 0 rule violation(s)</li><li>https://www.w3.org/WAI/demos/bad/before/annotated/home.html – 5 rule violation(s)</li><li>https://www.w3.org/WAI/demos/bad/before/news.html – 4 rule violation(s)</li></ul>
+<p class="note">Automated testing detects roughly a third to a half of WCAG issues. A full conformance review also needs
+manual checks (keyboard navigation, screen reader behaviour, meaningful alt text, captions). This report is a technical
+assessment, not legal advice.</p>
+</body></html>
